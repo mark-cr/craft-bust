@@ -9,3 +9,13 @@ Adds a file modified timestamp to front-end resources.
 Outputs:
 
 ```<link href="/css/application.css?1372022079" rel="stylesheet">```
+
+## Option: filename cache busting method
+
+_Note: Requires URL rewriting to work._
+
+```<link href="{{ craft.bust.er('/css/application.css','filename') }}" rel="stylesheet">```
+
+Outputs:
+
+```<link href="/css/application.0f4ee45a.css" rel="stylesheet">```
